@@ -75,6 +75,10 @@ public class ApiWifiServlet_NewVersion extends HttpServlet {
              * 포워드
              */
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/apiWifiSend.jsp");// 보내야함
+            if (requestDispatcher == null) {
+                // RequestDispatcher가 null인 경우의 처리 로직 추가
+                throw new IllegalStateException("apiWifiSend.jsp not found");
+            }
             requestDispatcher.forward(request,respons);
 
         } catch (Exception e) {

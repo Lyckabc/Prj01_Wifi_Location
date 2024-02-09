@@ -110,7 +110,6 @@
             <td><c:out value="${wifi.lat}"/></td>
             <td><c:out value="${wifi.lnt}"/></td>
             <td><c:out value="${wifi.dttm}"/></td>
-
     </tr>
             </c:forEach>
 

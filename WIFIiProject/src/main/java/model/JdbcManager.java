@@ -41,7 +41,7 @@ public class JdbcManager {
 
         public Connection createConnection() throws ClassNotFoundException, SQLException {
             //아이피 포트 계정 패스워드 인스턴스
-            String url = "jdbc:mariadb://localhost/wifi";
+            String url = "jdbc:mariadb://localhost/wi_db";
             String id = "root";
             String password = "1q!1q!";
 

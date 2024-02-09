@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Date;
 
 public class DAO extends JdbcManager {
 
@@ -92,23 +93,26 @@ public class DAO extends JdbcManager {
 
 
 
-    public List<WifiVO> search(Double latDouble, Double lntDouble) {
+    public List<WifiVO> getNearestWifiList(Double lat, Double lnt) {
 
-        String selectNearWifiQuery = "select * " +
-                ", format((6371 * acos(cos(radians(" + lntDouble + ")) * cos(radians(lat)) * cos(radians(lnt) - radians(" + latDouble + ")) " +
-                "+ sin(radians(" + lntDouble + ")) * sin(radians(lat)))), 4) as distance " +
-                " from wifi " +
-                " order by distance , X_SWIFI_MGR_NO" +
-                " limit 20";
+        List<WifiVO> list = new ArrayList<>();
 
         try {
             coon = createConnection();
-            ps = coon.prepareStatement(selectNearWifiQuery);
+
+            String sql = " SELECT *, " +
+                " round(6371*acos(cos(radians(?))*cos(radians(LAT))*cos(radians(LNT) " +
+                " -radians(?))+sin(radians(?))*sin(radians(LAT))), 4) " +
+                " AS distance " +
+                " FROM wi_db.wifi " +
+                " ORDER BY distance " +
+                " LIMIT 20;";
+
+            ps = coon.prepareStatement(sql);
+            ps.setDouble(1, lat);
+            ps.setDouble(2, lnt);
+            ps.setDouble(3, lat);
             rs = ps.executeQuery(); // 20개씩
-
-
-            List<WifiVO> list = new ArrayList<>();
-
 
             while (rs.next()) {
                 WifiVO wifiVO = new WifiVO(
@@ -136,8 +140,6 @@ public class DAO extends JdbcManager {
 
 
             }
-            return list;
-
 
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
@@ -148,8 +150,7 @@ public class DAO extends JdbcManager {
             closeStatement(ps);
             closeConnection(coon);
         }
-
-
+        return list;
     }
 
 
