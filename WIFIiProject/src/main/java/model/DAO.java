@@ -15,21 +15,27 @@ import java.util.Date;
 public class DAO extends JdbcManager {
 
     // DB 커넥션 부분
-    Connection coon = null;  // db연결해주는 구분 인터페이스처럼
-    PreparedStatement ps = null;   // sql 실행시켜주는 구문
-    ResultSet rs = null; // 한줄씩읽는애
+    Connection coon ;  // db연결해주는 구분 인터페이스처럼
+    PreparedStatement ps ;   // sql 실행시켜주는 구문
+    ResultSet rs ; // 한줄씩읽는애
 
     public void saveAllWifiDetailList(List<RowInfoDto> lists) throws Exception {
+        coon = null;
+        ps = null;
+        rs = null;
 
-        String sql = "insert into wifi(x_swifi_mgr_no, x_swifi_wrdofc, x_swifi_main_nm, \n" +
-                "                 x_swifi_adres1, x_swifi_adres2, x_swifi_instl_floor, \n" +
-                "                 x_swifi_instl_ty, x_swifi_instl_mby, x_swifi_svc_se, \n" +
-                "                 x_swifi_cmcwr, x_swifi_cnstc_year, x_swifi_inout_door, \n" +
-                "                 x_swifi_remars3, lat, lnt, work_dttm) \n" +
-                "values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-
+        int count = 0;// 배치가 가득찾는지 확인하는 용도.
 
         try {
+
+        String sql = " insert into wifi "
+                + " ( x_swifi_mgr_no, x_swifi_wrdofc, x_swifi_main_nm, x_swifi_adres1, x_swifi_adres2, "
+                + " x_swifi_instl_floor, x_swifi_instl_ty, x_swifi_instl_mby, x_swifi_svc_se, x_swifi_cmcwr, "
+                + " x_swifi_cnstc_year, x_swifi_inout_door, x_swifi_remars3, lat, lnt, work_dttm) "
+                + " values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?); ";
+
+
+
             coon = createConnection();   // 디비연결
 
             coon.setAutoCommit(false);
@@ -39,7 +45,6 @@ public class DAO extends JdbcManager {
 
             int basicBactchSize = 1000; // 배치사이즈는 500 /  밖에서 1000개씩 짜르기로했으니까 배치를 총 2번만들겠다.
 
-            int count = 0;  // 배치가 가득찾는지 확인하는 용도.
 
             for (int i = 0; i < lists.size(); i++) {   // 처음에 0~ 999까지 돌면서
 
@@ -86,12 +91,9 @@ public class DAO extends JdbcManager {
             closeConnection(coon);
         }
     }
-
     /**
      * dao.search(latDouble,lntDouble);
      */
-
-
 
     public List<WifiVO> getNearestWifiList(Double lat, Double lnt) {
 
@@ -153,12 +155,6 @@ public class DAO extends JdbcManager {
         return list;
     }
 
-
-
-
-
-
-
  // 데이터 자꾸쌓이니까 삭제해줄 쿼리
     public int removeAllData(){
 
@@ -193,16 +189,6 @@ public class DAO extends JdbcManager {
             closeStatement(ps);
             closeConnection(con);
         }
-
-
-
     }
-
-
 }
-
-
-
-
-
 

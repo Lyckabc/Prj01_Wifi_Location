@@ -1221,8 +1221,8 @@ wifi|schema||root||ALTER|G</Grants>
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
     <schema id="328" parent="1" name="wi_db">
-      <LastIntrospectionLocalTimestamp>2024-02-09.20:49:57</LastIntrospectionLocalTimestamp>
-      <CollationName>latin1_swedish_ci</CollationName>
+      <LastIntrospectionLocalTimestamp>2024-02-10.01:05:21</LastIntrospectionLocalTimestamp>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
     <user id="329" parent="1" name="mariadb.sys">
       <Host>localhost</Host>
@@ -1242,11 +1242,11 @@ wifi|schema||root||ALTER|G</Grants>
     </user>
     <table id="335" parent="328" name="history">
       <Engine>InnoDB</Engine>
-      <CollationName>latin1_swedish_ci</CollationName>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
     <table id="336" parent="328" name="wifi">
       <Engine>InnoDB</Engine>
-      <CollationName>latin1_swedish_ci</CollationName>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
     <column id="337" parent="335" name="lat">
       <DasType>double|0s</DasType>
@@ -1257,7 +1257,7 @@ wifi|schema||root||ALTER|G</Grants>
       <Position>2</Position>
     </column>
     <column id="339" parent="335" name="id">
-      <AutoIncrement>25</AutoIncrement>
+      <AutoIncrement>36</AutoIncrement>
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
@@ -1341,7 +1341,7 @@ wifi|schema||root||ALTER|G</Grants>
       <Position>16</Position>
     </column>
     <column id="359" parent="336" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>576961</AutoIncrement>
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>17</Position>

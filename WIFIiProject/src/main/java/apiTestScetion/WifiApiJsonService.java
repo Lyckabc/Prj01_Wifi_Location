@@ -1,20 +1,31 @@
 package apiTestScetion;
 
-import apidto.RowInfoDto;
+// JSON 처리를 위한 Gson 라이브러리
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+// HTTP 요청을 위한 OkHttp 라이브러리
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import apidto.WifiDto;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.List;
+
+// 기본 Java I/O 및 네트워킹
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.net.URL;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.ServletContext;
-import java.io.IOException;
+import java.io.File;
+import java.io.File;
+import java.io.FileReader;
+import java.lang.reflect.Type;
+import java.util.List;
+
+
+// 데이터 모델 클래스
+import apidto.WifiDto;
+import apidto.RowInfoDto;
+
+// 예외 처리
+;
 
 
 /**
@@ -27,7 +38,7 @@ import java.io.IOException;
 public class WifiApiJsonService {
     WifiApiParser parser = new WifiApiParser();
 
-//public WifiDto requestApiAndResponseToDt
+//public WifiDto requestApiAndResponseToDto
 //    public WifiDto requestApiAndResponseToDto(int start, int end) throws Exception {
 //
 //        OkHttpClient client = new OkHttpClient();
@@ -51,6 +62,36 @@ public class WifiApiJsonService {
 //
 //
 //    }
+    // Gson 인스턴스 생성
+    private final Gson gson = new Gson();
+
+    public WifiDto requestApiAndResponseToDto(int start, int end) throws Exception {
+        // JSON 파일의 경로를 시스템에 맞게 설정해야 합니다.
+        File jsonFile = new File("D:\\ZeroBase\\Task\\ApiWifiJavaServletProject-main\\WIFIiProject\\src\\main\\webapp\\db\\wifi_data.json");
+
+        // JSON 파일을 읽고 파싱
+        try (InputStreamReader reader = new InputStreamReader(new FileInputStream(jsonFile), StandardCharsets.UTF_8)) {
+            // JSON 배열 구조를 가정, RowInfoDto 리스트로 파싱
+            Type listType = new TypeToken<List<RowInfoDto>>(){}.getType();
+            List<RowInfoDto> wifiDetails = gson.fromJson(reader, listType);
+
+            // WifiDto 객체 생성 및 필드 설정
+            WifiDto wifiDto = new WifiDto();
+            wifiDto.setWifiDetails(wifiDetails);
+            wifiDto.setTotalcount(wifiDetails.size()); // 총 개수 설정
+
+            return wifiDto;
+        } catch (Exception e) {
+            throw new RuntimeException("JSON 파일을 읽는 중 오류가 발생했습니다.", e);
+        }
+    }
+
+    // 기존의 getTotalPageCount 및 getTotalCount 메서드는 변경 없이 유지합니다.
+
+    // 필요한 경우 추가적인 메서드 구현...
+
+
+    /*
     public WifiDto requestApiAndResponseToDto(int start, int end) throws Exception {
         List<RowInfoDto> wifiDetails = new ArrayList<>();
         int totalcount = 0;
@@ -83,7 +124,9 @@ public class WifiApiJsonService {
         // 예시: rowInfo.setSomeField(values[0]); 등으로 각 필드를 설정
         return rowInfo;
     }
-    /**
+    /*
+     */
+     /**
      *
      getTotalPageCount() => 18페이지   (1000개씩)
      @getTotalCount() => 17830개

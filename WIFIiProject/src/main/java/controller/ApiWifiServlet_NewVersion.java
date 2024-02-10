@@ -80,12 +80,9 @@ public class ApiWifiServlet_NewVersion extends HttpServlet {
                 throw new IllegalStateException("apiWifiSend.jsp not found");
             }
             requestDispatcher.forward(request,respons);
-
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
-
     }
 
 }
