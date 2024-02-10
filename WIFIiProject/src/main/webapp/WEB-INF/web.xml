@@ -5,8 +5,19 @@
          version="5.0">
 
     <welcome-file-list>
-
         <welcome-file>/view/index.jsp</welcome-file>
-
     </welcome-file-list>
+
+    <!-- LocationHistoryController 서블릿 정의 -->
+    <servlet>
+        <servlet-name>LocationHistoryController</servlet-name>
+        <servlet-class>controller.LocationHistoryController</servlet-class>
+    </servlet>
+
+    <!-- LocationHistoryController에 대한 서블릿 매핑 -->
+    <servlet-mapping>
+        <servlet-name>LocationHistoryController</servlet-name>
+        <url-pattern>/searchWifi</url-pattern>
+    </servlet-mapping>
+
 </web-app>

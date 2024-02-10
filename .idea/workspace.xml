@@ -5,30 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b15b17d7-805f-4a37-b348-8f3870a2bc0c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WIFIiProject/build/classes/java/main/apiTestScetion/WifiApiJsonService$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WIFIiProject/build/libs/exploded/WIFIiProject-1.0-SNAPSHOT.war/WEB-INF/classes/apiTestScetion/WifiApiJsonService$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WIFIiProject/build/libs/exploded/WIFIiProject-1.0-SNAPSHOT.war/db/wifi_data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WIFIiProject/build/libs/exploded/WIFIiProject-1.0-SNAPSHOT.war/db/wifi_data2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WIFIiProject/src/main/webapp/db/wifi_data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WIFIiProject/src/main/webapp/db/wifi_data2.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/5d6134cd-039e-4317-a63a-fce4b127b940.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5d6134cd-039e-4317-a63a-fce4b127b940.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WIFIiProject/.gradle/7.4.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/.gradle/7.4.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WIFIiProject/.gradle/7.4.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/.gradle/7.4.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WIFIiProject/.gradle/7.4.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/.gradle/7.4.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WIFIiProject/.gradle/7.4.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/.gradle/7.4.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WIFIiProject/.gradle/7.4.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/.gradle/7.4.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WIFIiProject/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WIFIiProject/build/classes/java/main/apiTestScetion/WifiApiJsonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/build/classes/java/main/apiTestScetion/WifiApiJsonService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WIFIiProject/build/classes/java/main/controller/ApiWifiServlet_NewVersion.class" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/build/classes/java/main/controller/ApiWifiServlet_NewVersion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WIFIiProject/build/classes/java/main/model/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/build/classes/java/main/model/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WIFIiProject/build/libs/exploded/WIFIiProject-1.0-SNAPSHOT.war/WEB-INF/classes/apiTestScetion/WifiApiJsonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/build/libs/exploded/WIFIiProject-1.0-SNAPSHOT.war/WEB-INF/classes/apiTestScetion/WifiApiJsonService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WIFIiProject/build/libs/exploded/WIFIiProject-1.0-SNAPSHOT.war/WEB-INF/classes/controller/ApiWifiServlet_NewVersion.class" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/build/libs/exploded/WIFIiProject-1.0-SNAPSHOT.war/WEB-INF/classes/controller/ApiWifiServlet_NewVersion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WIFIiProject/build/libs/exploded/WIFIiProject-1.0-SNAPSHOT.war/WEB-INF/classes/model/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/build/libs/exploded/WIFIiProject-1.0-SNAPSHOT.war/WEB-INF/classes/model/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WIFIiProject/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WIFIiProject/src/main/java/apiTestScetion/WifiApiJsonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/src/main/java/apiTestScetion/WifiApiJsonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WIFIiProject/src/main/java/controller/ApiWifiServlet_NewVersion.java" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/src/main/java/controller/ApiWifiServlet_NewVersion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WIFIiProject/src/main/java/model/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/src/main/java/model/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WIFIiProject/build/libs/exploded/WIFIiProject-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/build/libs/exploded/WIFIiProject-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WIFIiProject/build/libs/exploded/WIFIiProject-1.0-SNAPSHOT.war/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/build/libs/exploded/WIFIiProject-1.0-SNAPSHOT.war/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WIFIiProject/src/main/java/controller/LocationHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/src/main/java/controller/LocationHistoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WIFIiProject/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WIFIiProject/src/main/webapp/view/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WIFIiProject/src/main/webapp/view/main.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ZB_Prj/src/main/webapp/META-INF/MANIFEST.MF" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +46,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JspContextManager">
+    <jsp-to-context jsp-file="file://$PROJECT_DIR$/WIFIiProject/src/main/webapp/view/main.jsp" context-file="file://$PROJECT_DIR$/WIFIiProject/src/main/webapp/view/index.jsp" />
+  </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
@@ -87,35 +73,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build WIFIiProject.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat Server.Tomcat 8.5.98.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "ignore_missing_gitignore": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Toji/Downloads/Public-Wifi-main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.18551587",
-    "project.structure.side.proportion": "0.46338534",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build WIFIiProject.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat 8.5.98.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Toji/Downloads/Public-Wifi-main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.18551587&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.46338534&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Tomcat 8.5.98" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.98" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true" show_console_on_std_out="true">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
@@ -221,7 +207,8 @@
       <option name="presentableId" value="Default" />
       <updated>1707496331845</updated>
       <workItem from="1707496332893" duration="8599000" />
-      <workItem from="1707507806287" duration="17938000" />
+      <workItem from="1707507806287" duration="18025000" />
+      <workItem from="1707601949027" duration="4527000" />
     </task>
     <servers />
   </component>
@@ -238,7 +225,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/WIFIiProject/src/main/java/controller/LocationHistoryController.java</url>
-          <line>33</line>
+          <line>34</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

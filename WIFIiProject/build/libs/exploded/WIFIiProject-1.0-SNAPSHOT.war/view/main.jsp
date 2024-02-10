@@ -11,6 +11,7 @@
         pageEncoding="UTF-8"
 %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,22 +21,12 @@
 </head>
 <body>
     <!-- Form -->
-    <%
-        String lat = request.getParameter("lat") == null ? "0.0" : request.getParameter("lat");
-        String lnt = request.getParameter("lnt") == null ? "0.0" : request.getParameter("lnt");
-    %>
-    <div class="input">
-		<span>
-			LAT (위도):
-			<input type="text" id="lat" name="latitude" value="<%=lat%>">
-		</span>
-        <span>
-            LNT (경도):
-			<input type="text" id="lnt" name="longitude" value="<%=lnt%>">
-		</span>
-        <button id="btn_cur_position"><span>내 위치 가져오기</span></button>
-        <button id="btn_nearest_wifi"><span>근처 WIFI 정보 보기</span></button>
-    </div>
+    <form id="wifiSearchForm" action="/searchWifi" method="get">
+        LAT (위도): <input type="text" id="lat" name="lat" value="">
+        LNT (경도): <input type="text" id="lnt" name="lnt" value="">
+        <button type="button" id="btn_cur_position">내 위치 가져오기</button>
+        <input type="submit" value="근처 WIFI 정보 보기">
+    </form>
 
 
     <!-- Data Display -->
@@ -63,27 +54,38 @@
             </tr>
             </thead>
             <tbody>
+            <<%
+                if (request.getAttribute("searchList") != null) {
+                    java.util.List searchList = (java.util.List) request.getAttribute("searchList");
+                    System.out.println("searchList contents:");
+                    for (Object wifi : searchList) {
+                        System.out.println(wifi.toString()); // 각 WifiVO 객체의 toString() 메소드가 정보를 적절히 출력하도록 구현되어 있어야 합니다.
+                    }
+                } else {
+                    System.out.println("searchList is null or not set.");
+                }
+            %>
             <c:choose>
                 <c:when test="${not empty searchList}">
                     <c:forEach var="wifi" items="${searchList}">
                         <tr>
-                            <td>${wifi.distance}</td>
-                            <td>${wifi.mgrNo}</td>
-                            <td>${wifi.wrdofc}</td>
-                            <td>${wifi.mainNm}</td>
-                            <td>${wifi.adres1}</td>
-                            <td>${wifi.adres2}</td>
-                            <td>${wifi.floor}</td>
-                            <td>${wifi.ty}</td>
-                            <td>${wifi.mby}</td>
-                            <td>${wifi.svcSe}</td>
-                            <td>${wifi.cmcwr}</td>
-                            <td>${wifi.year}</td>
-                            <td>${wifi.door}</td>
-                            <td>${wifi.remars3}</td>
-                            <td>${wifi.lat}</td>
-                            <td>${wifi.lnt}</td>
-                            <td>${wifi.dttm}</td>
+                            <td><c:out value="${wifi.distance}"/></td>
+                            <td><c:out value="${wifi.mgrNo}"/></td>
+                            <td><c:out value="${wifi.wrdofc}"/></td>
+                            <td><c:out value="${wifi.mainNm}"/></td>
+                            <td><c:out value="${wifi.adres1}"/></td>
+                            <td><c:out value="${wifi.adres2}"/></td>
+                            <td><c:out value="${wifi.floor}"/></td>
+                            <td><c:out value="${wifi.ty}"/></td>
+                            <td><c:out value="${wifi.mby}"/></td>
+                            <td><c:out value="${wifi.svcSe}"/></td>
+                            <td><c:out value="${wifi.cmcwr}"/></td>
+                            <td><c:out value="${wifi.year}"/></td>
+                            <td><c:out value="${wifi.door}"/></td>
+                            <td><c:out value="${wifi.remars3}"/></td>
+                            <td><c:out value="${wifi.lat}"/></td>
+                            <td><c:out value="${wifi.lnt}"/></td>
+                            <td><c:out value="${wifi.dttm}"/></td>
                         </tr>
                     </c:forEach>
                 </c:when>
@@ -120,7 +122,7 @@
             }
         });
 
-        getNearestWifi.addEventListener("click", function (){
+        document.getElementById("wifiSearchForm").addEventListener("submit", function (){
             let latitude = document.getElementById("lat").value;
             let longitude = document.getElementById("lnt").value;
 

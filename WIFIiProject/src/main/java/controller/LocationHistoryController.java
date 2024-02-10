@@ -8,6 +8,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -44,7 +45,7 @@ public class LocationHistoryController extends HttpServlet {
                 List<WifiVO> searchList = dao.getNearestWifiList(latitude, longitude);
 
                 request.setAttribute("searchList", searchList);
-                RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp"); // 또는 결과를 보여줄 다른 JSP 페이지
+                RequestDispatcher dispatcher = request.getRequestDispatcher("/view/main.jsp"); // 또는 결과를 보여줄 다른 JSP 페이지
                 dispatcher.forward(request, response);
             } catch (NumberFormatException e) {
                 response.sendError(HttpServletResponse.SC_BAD_REQUEST, "잘못된 위도 또는 경도 형식입니다.");
