@@ -213,4 +213,4 @@ https://busy-apple-85c.notion.site/README-md-57ad70f041e247709e3b2b18659c5fce?pv
 
 ## 🎞프로젝트 Setting 및 Refer
 
-- [Prj01_Wifi_Location]((https://busy-apple-85c.notion.site/Prj01_Wifi_Location-f5db230cd0de4b25af43c62b91a9440e?pvs=4))
+- [Prj01_Wifi_Location] https://busy-apple-85c.notion.site/Prj01_Wifi_Location-f5db230cd0de4b25af43c62b91a9440e?pvs=4
