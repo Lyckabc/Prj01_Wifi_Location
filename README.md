@@ -213,4 +213,4 @@ https://busy-apple-85c.notion.site/README-md-57ad70f041e247709e3b2b18659c5fce?pv
 
 ## 🎞프로젝트 Setting 및 Refer
 
-- [Prj01_Wifi_Location](%5B%E1%84%80%E1%85%AD%E1%84%8B%E1%85%B2%E1%86%A8%5D%E1%84%80%E1%85%AD%E1%84%8B%E1%85%B2%E1%86%A8%2055896f50da264086af4ca3b98496628c/00%5B%E1%84%80%E1%85%AD%E1%84%8B%E1%85%B2%E1%86%A8%5D%20ZeroBase%20dda34feeca184d889c94a14eb1c3eafd/%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A6%20929f7e58b3e0467c8d386df5022f2c58/%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A6%E1%84%83%E1%85%B3%E1%86%AF%20ebad8ed6d6104bbdbe01df438c0d23d4/Prj01_Wifi_Location%20f5db230cd0de4b25af43c62b91a9440e.md)
+- [Prj01_Wifi_Location]((https://busy-apple-85c.notion.site/Prj01_Wifi_Location-f5db230cd0de4b25af43c62b91a9440e?pvs=4))
