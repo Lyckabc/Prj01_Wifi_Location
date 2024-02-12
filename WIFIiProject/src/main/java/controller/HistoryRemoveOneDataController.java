@@ -23,8 +23,8 @@ public class HistoryRemoveOneDataController extends HttpServlet {
         PrintWriter out = response.getWriter();
         try {
             // 클라이언트에서 전송된 historyId 값을 받아옴
-            String historyIdParam = request.getParameter("Hid");
-            System.out.println("Received historyId: " + request.getParameter("Hid"));
+            String historyIdParam = request.getParameter("deleteIdnumber");
+            System.out.println("Received historyId: " + request.getParameter("deleteIdnumber"));
             // 받아온 historyId 값을 서버 로그에 출력
             System.out.println("String historyId: " + historyIdParam);
 
