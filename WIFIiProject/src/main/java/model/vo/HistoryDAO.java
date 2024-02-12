@@ -11,7 +11,6 @@ import java.util.List;
 
 public class HistoryDAO extends JdbcManager {
 
-
     public int save(Double lat, Double lnt) {
         Connection con = null;
         PreparedStatement ps = null;
@@ -45,13 +44,9 @@ public class HistoryDAO extends JdbcManager {
             closeStatement(ps);
             closeConnection(con);
         }
-
-
     }
 
-
     public List<HistoryVO> HistoryselectAll() {
-
 
         String searchSql = " select * from history " +
                 " order by id desc ";
@@ -118,11 +113,7 @@ public class HistoryDAO extends JdbcManager {
             closeStatement(ps);
             closeConnection(con);
         }
-
-
-
     }
-
 
     public int removeOneData(int id){
 
@@ -157,10 +148,5 @@ public class HistoryDAO extends JdbcManager {
             closeStatement(ps);
             closeConnection(con);
         }
-
-
-
     }
-
-
 }

@@ -21,12 +21,14 @@
 </head>
 <body>
     <!-- Form -->
-    <form id="wifiSearchForm" action="/searchWifi" method="get">
+    <form id="wifiSearchForm" action="/s" method="get">
         LAT (위도): <input type="text" id="lat" name="lat" value="">
         LNT (경도): <input type="text" id="lnt" name="lnt" value="">
         <button type="button" id="btn_cur_position">내 위치 가져오기</button>
-        <input type="submit" value="근처 WIFI 정보 보기">
+        <button onclick="showNearbyWifi()">근처 WIFI 정보 보기</button>
     </form>
+    <p>
+    </p>
 
 
     <!-- Data Display -->
@@ -121,17 +123,27 @@
                 alert("위치 정보를 확인할 수 없으니 직접 입력해주시기 바랍니다.")
             }
         });
-
         document.getElementById("wifiSearchForm").addEventListener("submit", function (){
             let latitude = document.getElementById("lat").value;
             let longitude = document.getElementById("lnt").value;
 
             if (latitude !== "" || longitude !== "") {
-                window.location.assign("http://localhost:8080?lat=" + latitude + "&lnt=" + longitude);
+                window.location.assign("http://localhost:8080/?lat=" + latitude + "&lnt=" + longitude);
             } else {
                 alert("위치 정보를 입력하신 후에 조회해주세요.")
             }
-        })
+        });
+
+        function showNearbyWifi() {
+            let latitude = document.getElementById("lat").value;
+            let longitude = document.getElementById("lnt").value;
+
+            if (latitude !== "" || longitude !== "") {
+                window.location.href("http://localhost:8080/lat=" + latitude + "&lnt=" + longitude);
+            } else {
+                alert("위치 정보를 입력하신 후에 조회해주세요.")
+            }
+        }
     </script>
 
 

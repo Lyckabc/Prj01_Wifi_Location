@@ -11,7 +11,7 @@
         pageEncoding="UTF-8"
 %>
 
-<!DOCTYPE html>
+
 <html>
 <head>
     <title>와이파이 정보 구하기</title>
@@ -20,9 +20,9 @@
 </head>
 <body>
 <!-- Actions -->
-    <a href="http://localhost:8080/view/index.jsp">홈</a>
+    <a href="http://localhost:8080/">홈</a>
     <a href="#">|</a>
-    <a href="/HomeServlet" class="btn btn-warnning" role=button">위치 히스토리 목록</a>
+    <a href="/HistoryList" class="btn btn-warnning" role=button">위치 히스토리 목록</a>
     <a href="#">|</a>
     <a href="/ApiWifiController" class="btn btn-success" role=button">Open API 와이파이 정보 가져오기</a>
     <a href="#">|</a>

@@ -18,6 +18,8 @@
 <body>
 <h1>와이파이 정보 구하기</h1>
 <%@include file="header.jsp"%>
+<p>
+</p>
 
 <%@include file="main.jsp"%>
 </body>

@@ -16,7 +16,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<a href="http://localhost:8080/view/index.jsp" class="btn btn-default btn-lg btn-block" role=button"> 홈으로 이동</a>
+<a href="http://localhost:8080/" class="btn btn-default btn-lg btn-block" role=button"> 홈으로 이동</a>
 <h1>
 
 

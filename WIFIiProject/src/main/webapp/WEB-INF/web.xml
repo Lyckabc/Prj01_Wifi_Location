@@ -17,7 +17,16 @@
     <!-- LocationHistoryController에 대한 서블릿 매핑 -->
     <servlet-mapping>
         <servlet-name>LocationHistoryController</servlet-name>
-        <url-pattern>/searchWifi</url-pattern>
+        <url-pattern>/s</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HistoryController</servlet-name>
+        <servlet-class>controller.HistoryController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HistoryController</servlet-name>
+        <url-pattern>/His</url-pattern>
     </servlet-mapping>
 
 </web-app>

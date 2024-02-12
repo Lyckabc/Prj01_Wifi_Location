@@ -45,7 +45,7 @@ public class LocationHistoryController extends HttpServlet {
                 List<WifiVO> searchList = dao.getNearestWifiList(latitude, longitude);
 
                 request.setAttribute("searchList", searchList);
-                RequestDispatcher dispatcher = request.getRequestDispatcher("/view/main.jsp"); // 또는 결과를 보여줄 다른 JSP 페이지
+                RequestDispatcher dispatcher = request.getRequestDispatcher("/view/index.jsp"); // 또는 결과를 보여줄 다른 JSP 페이지
                 dispatcher.forward(request, response);
             } catch (NumberFormatException e) {
                 response.sendError(HttpServletResponse.SC_BAD_REQUEST, "잘못된 위도 또는 경도 형식입니다.");

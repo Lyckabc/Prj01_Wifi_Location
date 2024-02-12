@@ -15,7 +15,7 @@ class DAOTest {
 //127.041564
     @Test
     void  serachTest(){
-        List<WifiVO> search = dao.search( 37.502982,127.041564);
+        List<WifiVO> search = dao.getNearestWifiList(37.502982,127.041564);
         assertEquals(20,search.size());
     }
 
