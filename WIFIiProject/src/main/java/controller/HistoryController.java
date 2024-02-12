@@ -38,33 +38,4 @@ public class HistoryController extends HttpServlet{
         requestDispatcher.forward(request,response);
 
     }
-//    @Override
-//    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        // Existing deletion logic
-//
-//        // Set response type and encoding
-//        response.setContentType("application/json");
-//        response.setCharacterEncoding("UTF-8");
-//
-//        String historyIdParam = request.getParameter("historyId");
-//
-//        int historyId = Integer.parseInt(historyIdParam);
-//        int result = historyDAO.removeOneData(historyId);
-//        PrintWriter out = response.getWriter();
-//
-//        out.print("historyIdParam : " + historyIdParam); // jsonString은 JSON 형식의 문자열
-//        out.flush();
-//
-//
-//        if(result > 0) {
-//            // If deletion is successful
-//            out.println("{\"success\": true}");
-//        } else {
-//            // If deletion fails
-//            out.println("{\"success\": false}");
-//        }
-//        out.flush();
-//        // Prepare response payload
-//    }
-
 }

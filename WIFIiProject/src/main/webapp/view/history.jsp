@@ -52,24 +52,31 @@
     </div>
 
 <script>
-    $(".button").click(function () {
+    document.querySelectorAll('.button').forEach(button => {
+        button.addEventListener('click', function() {
+            var tr = this.parentNode.parentNode;
+            var td = tr.children;
+            var deleteIdnumber = td[0].textContent; // ID 값을 가져옵니다.
 
-            var checkBtn = $(this);
-            var tr = checkBtn.parent().parent();
-            var td = tr.children();
-
-            var deleteIdnumber = td.eq(0).text();
-            // console.log(no);
-
-            $.ajax({
-                type:"POST",
-                url: "http://localhost:8080/removeOneData?deleteIdnumber=" + deleteIdnumber
-
-            }).done(function (){
-                location.reload();
+            // Fetch API를 사용하여 서버에 요청을 보냅니다.
+            fetch("http://localhost:8080/removeOneData?deleteIdnumber=" + deleteIdnumber, {
+                method: 'POST', // HTTP 메소드 지정
+                // 필요한 경우 headers와 body를 추가할 수 있습니다.
+                // headers: { 'Content-Type': 'application/json' },
+                // body: JSON.stringify({ key: 'value' })
             })
-        }
-    )
+                .then(response => {
+                    if (response.ok) {
+                        return response.text();
+                    }
+                    throw new Error('Network response was not ok.');
+                })
+                .then(() => {
+                    location.reload(); // 요청이 성공적으로 완료되면 페이지를 새로고침합니다.
+                })
+                .catch(error => console.error('There has been a problem with your fetch operation:', error));
+        });
+    });
 </script>
 </body>
 </html>
